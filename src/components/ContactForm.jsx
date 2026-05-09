@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
-export default function ContactForm() {
+export default function ContactForm({ compact = false }) {
   const [status, setStatus] = useState('');
 
   const handleSubmit = async (e) => {
@@ -32,7 +32,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="contact-section">
+    <section id="contact" className={`contact-section ${compact ? 'contact-section-standalone' : ''}`}>
       <div className="contact-copy">
         <span className="eyebrow">Start simple</span>
         <h2>Tell me what keeps getting missed.</h2>
@@ -49,7 +49,7 @@ export default function ContactForm() {
             <Phone size={20} />
             (555) 010-1234
           </a>
-          <span style={{ color: 'var(--muted)', marginTop: '1rem', fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <span className="contact-location">
             <MapPin size={20} />
             Kerrville, TX and remote
           </span>
@@ -81,8 +81,8 @@ export default function ContactForm() {
           <label htmlFor="message">What needs cleanup?</label>
           <textarea id="message" name="message" rows="4" required></textarea>
         </div>
-        <button className="button primary" style={{ width: '100%' }} type="submit">Request a call</button>
-        {status && <p className="form-status" role="status" aria-live="polite" style={{ marginTop: '1rem', color: 'var(--terracotta)', fontWeight: '600' }}>{status}</p>}
+        <button className="button primary full-button" type="submit">Request a call</button>
+        {status && <p className="form-status" role="status" aria-live="polite">{status}</p>}
       </form>
     </section>
   );

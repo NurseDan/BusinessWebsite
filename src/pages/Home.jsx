@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import ContactForm from '../components/ContactForm';
+import { ArrowRight, CheckCircle2, FileText, GitBranch, UsersRound } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -8,41 +8,69 @@ export default function Home() {
         <div className="hero-bg"></div>
         <div className="hero-overlay"></div>
         <div className="hero-content">
-          <span className="eyebrow">Healthcare Operations Support</span>
-          <h1>Cleaner workflows. Clearer documentation. Fewer missed steps.</h1>
+          <span className="eyebrow">Healthcare operations support</span>
+          <h1>Make the messy parts of care operations easier to run.</h1>
           <p className="hero-copy">
-            Practical workflow, documentation, and staff process support for small practices,
-            assisted living operators, and behavioral health teams across Kerrville and the Texas
-            Hill Country.
+            Dobar Health Consultants helps small healthcare, assisted living, and behavioral
+            health teams clean up workflows, documentation, staff guides, and internal handoffs.
           </p>
           <div className="btn-group">
-            <a className="button primary" href="#contact">Schedule a 15-minute call</a>
-            <a className="button secondary" href="#services">View service menu</a>
+            <Link className="button primary" to="/contact">
+              Schedule a 15-minute call
+              <ArrowRight size={18} />
+            </Link>
+            <a className="button secondary" href="#services">View services</a>
+          </div>
+          <div className="hero-note">
+            <CheckCircle2 size={18} />
+            Fixed-scope projects for Kerrville and Texas Hill Country healthcare teams.
           </div>
         </div>
       </section>
 
       <section className="proof-band" aria-label="Business focus">
         <div className="proof-item">
+          <GitBranch size={24} />
           <strong>Workflow mapping</strong>
           <span>See where intake, referrals, handoffs, and incident paperwork break down.</span>
         </div>
         <div className="proof-item">
+          <FileText size={24} />
           <strong>Documentation cleanup</strong>
           <span>Standardize forms, SOPs, policies, folders, naming, and version control.</span>
         </div>
         <div className="proof-item">
+          <UsersRound size={24} />
           <strong>Staff process guides</strong>
           <span>Turn messy internal knowledge into checklists your team can actually use.</span>
         </div>
       </section>
 
+      <section className="intro-section">
+        <div>
+          <span className="eyebrow">Why this exists</span>
+          <h2>Most small teams are not broken. Their systems are just living in too many places.</h2>
+        </div>
+        <div className="intro-copy">
+          <p>
+            A form is in one folder. A newer version is in someone's email. A handoff process is
+            known by one experienced staff member. The result is more rework, more questions, and
+            more opportunities for something important to be missed.
+          </p>
+          <p>
+            The work here is practical: map the real process, clean the documents, build simple
+            guides, and leave your team with tools they can use the next day.
+          </p>
+        </div>
+      </section>
+
       <section id="services" className="section">
         <div className="section-header">
-          <span className="eyebrow">Transparent Pricing</span>
-          <h2>Fixed, upfront pricing at a fraction of traditional consulting rates.</h2>
+          <span className="eyebrow">Services</span>
+          <h2>Choose one focused problem and get a clear deliverable.</h2>
           <p>
-            No open-ended retainers or surprise bills. Start with one focused problem, get a clean deliverable, and know exactly what it costs before we begin.
+            No open-ended mystery engagement. Each service has a defined scope, clear output, and
+            upfront price range.
           </p>
         </div>
 
@@ -57,7 +85,7 @@ export default function Home() {
               <li>Manager and staff interviews</li>
               <li>Current-state process map</li>
             </ul>
-            <Link to="/services/workflow-snapshot" className="button primary" style={{marginTop: '2rem', display: 'inline-flex', width: 'fit-content'}}>Learn more</Link>
+            <Link to="/services/workflow-snapshot" className="card-link">Learn more <ArrowRight size={16} /></Link>
           </article>
 
           <article className="service-card">
@@ -70,7 +98,7 @@ export default function Home() {
               <li>Master forms inventory</li>
               <li>Cleaned core templates</li>
             </ul>
-            <Link to="/services/documentation-cleanup" className="button secondary" style={{marginTop: '2rem', display: 'inline-flex', width: 'fit-content', color: 'var(--sage-dark)', borderColor: 'var(--sage-dark)'}}>Learn more</Link>
+            <Link to="/services/documentation-cleanup" className="card-link">Learn more <ArrowRight size={16} /></Link>
           </article>
 
           <article className="service-card">
@@ -83,7 +111,7 @@ export default function Home() {
               <li>Up to 5 quick guides</li>
               <li>Role-specific onboarding</li>
             </ul>
-            <Link to="/services/staff-training-kit" className="button secondary" style={{marginTop: '2rem', display: 'inline-flex', width: 'fit-content', color: 'var(--sage-dark)', borderColor: 'var(--sage-dark)'}}>Learn more</Link>
+            <Link to="/services/staff-training-kit" className="card-link">Learn more <ArrowRight size={16} /></Link>
           </article>
 
           <article className="service-card wide-card">
@@ -94,7 +122,7 @@ export default function Home() {
                 A deeper operations package for incident documentation, family communication,
                 safety-event reporting, med-adjacent tracking, and handoff consistency.
               </p>
-              <Link to="/services/behavioral-health-ops" className="button primary" style={{marginTop: '1rem', display: 'inline-flex', width: 'fit-content'}}>View Full Package Details</Link>
+              <Link to="/services/behavioral-health-ops" className="button primary">View package details</Link>
             </div>
             <ul>
               <li>2-3 connected process maps</li>
@@ -133,7 +161,7 @@ export default function Home() {
               <p>Deliver clean maps, revised documents, checklists, and ranked next steps.</p>
             </div>
             <div className="process-step">
-              <span class="step-num">04</span>
+              <span className="step-num">04</span>
               <h3>Walk through</h3>
               <p>Review the findings, answer questions, and identify the best next project.</p>
             </div>
@@ -141,7 +169,34 @@ export default function Home() {
         </div>
       </section>
 
-      <ContactForm />
+      <section className="audience-section">
+        <div className="audience-card">
+          <span className="eyebrow">Built for</span>
+          <h2>Small healthcare teams that need clarity without a giant implementation.</h2>
+          <div className="audience-list">
+            <span>Small practices</span>
+            <span>Assisted living</span>
+            <span>Behavioral health</span>
+            <span>Home health</span>
+            <span>Therapy groups</span>
+            <span>Solo practitioners</span>
+          </div>
+        </div>
+        <div className="audience-image" aria-hidden="true"></div>
+      </section>
+
+      <section className="final-cta">
+        <span className="eyebrow">Start simple</span>
+        <h2>Tell me what keeps getting missed.</h2>
+        <p>
+          A short call is enough to decide whether the first step should be a process map, a
+          document cleanup, or staff-facing guides.
+        </p>
+        <Link className="button primary" to="/contact">
+          Go to contact page
+          <ArrowRight size={18} />
+        </Link>
+      </section>
     </main>
   );
 }

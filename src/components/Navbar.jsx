@@ -37,9 +37,10 @@ export default function Navbar() {
       </button>
 
       <nav className={`site-nav ${isOpen ? 'is-open' : ''}`} aria-label="Primary navigation">
+        <Link to="/">Home</Link>
         <Link to="/#services">Services</Link>
         <Link to="/#process">Process</Link>
-        <Link to="/#contact">Contact</Link>
+        <Link to="/contact" className="nav-cta">Contact</Link>
       </nav>
     </header>
   );

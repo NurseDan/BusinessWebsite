@@ -36,7 +36,7 @@ export default function StaffTraining() {
               <CheckCircle2 color="var(--terracotta)" style={{ flexShrink: 0, marginTop: '2px' }} />
               <div>
                 <strong>One Escalation Tree</strong>
-                <p style={{ color: 'var(--muted)', marginTop: '0.25rem' }}>A clear visual guide telling staff exactly who to call when things go wrong—no more guessing in an emergency.</p>
+                <p style={{ color: 'var(--muted)', marginTop: '0.25rem' }}>A clear visual guide telling staff exactly who to call when things go wrong - no more guessing in an emergency.</p>
               </div>
             </li>
             <li style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
