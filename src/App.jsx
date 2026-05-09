@@ -7,6 +7,7 @@ import WorkflowSnapshot from './pages/WorkflowSnapshot';
 import DocCleanup from './pages/DocCleanup';
 import StaffTraining from './pages/StaffTraining';
 import BehavioralOps from './pages/BehavioralOps';
+import { Analytics } from "@vercel/analytics/react";
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/services/behavioral-health-ops" element={<BehavioralOps />} />
       </Routes>
       <Footer />
+      <Analytics />
     </Router>
   );
 }
